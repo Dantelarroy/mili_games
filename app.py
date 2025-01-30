@@ -6,12 +6,12 @@ import juegos_ingles_in_on_at  # Asegúrate de que 'game1.py' esté en el mismo 
 import juegos_ingles_tenses  # Asegúrate de que 'game2.py' esté en el mismo directorio
 
 # Título de la aplicación
-st.title("¡Bienvenidos!")
+st.title("Welcome!")
 
 # Crear un selectbox para elegir el juego
 game_choice = st.selectbox(
-    "¿Qué juego te gustaría jugar?",
-    [None, "Juego de Tenses", "Juego de In,At,On"]  # El valor predeterminado es None
+    "Which game would you like to play?",
+    [None, "Tenses Game", "In, At, On Game"]  # El valor predeterminado es None
 )
 
 # Cargar la imagen

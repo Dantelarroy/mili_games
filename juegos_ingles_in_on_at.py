@@ -607,27 +607,27 @@ questions = [    {
 
 # Función para jugar el juego
 def play_game():
-    st.title("¡Bienvenido al juego de 'in', 'on' and 'at'!")
+    st.title("Welcome to the 'in', 'on', and 'at' game!")
     
     score = 0
 
     for i, q in enumerate(questions):
-        st.subheader(f"Pregunta {i + 1}: {q['question']}")
-        option_selected = st.radio(f"Selecciona una opción:", q["options"], key=f"question_{i}", index=None)
+        st.subheader(f"Question {i + 1}: {q['question']}")
+        option_selected = st.radio(f"Select an option:", q["options"], key=f"question_{i}", index=None)
 
-        # Esperar que el jugador seleccione una opción
+        # Wait for the player to select an option
         if option_selected:
-            # Verificar la respuesta
+            # Check the answer
             if option_selected == q["options"][ord(q["answer"]) - 97]:
-                st.success("¡Correcto!")
+                st.success("Correct!")
                 score += 1
-                st.write(f"Explicación: {q['explanation']}")
+                st.write(f"Explanation: {q['explanation']}")
             else:
-                st.error("Incorrecto.")
-                st.write(f"Explicación: {q['explanation']}")
+                st.error("Incorrect.")
+                st.write(f"Explanation: {q['explanation']}")
 
-    st.subheader(f"\nTu puntuación final: {score} de {len(questions)}")
+    st.subheader(f"\nYour final score: {score} out of {len(questions)}")
 
-# Ejecutar el juego
+# Run the game
 if __name__ == "__main__":
     play_game()
