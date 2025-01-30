@@ -21,7 +21,7 @@ image = Image.open(image_path)
 st.image(image, caption="¡Diviértete con los Mili Games!", use_container_width=True)
 
 # Ejecutar el juego correspondiente si se selecciona una opción
-if game_choice == "Juego de Tenses":
+if game_choice == "Tenses Game":
     juegos_ingles_tenses.play_game()  # Llamar a la función del primer juego
-elif game_choice == "Juego de In,At,On":
+elif game_choice == "In, At, On Game":
     juegos_ingles_in_on_at.play_game()  # Llamar a la función del segundo juego
