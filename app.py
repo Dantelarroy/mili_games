@@ -15,7 +15,7 @@ game_choice = st.selectbox(
 )
 
 # Cargar la imagen
-image_path = r"C:\\Users\\dalarroy\\OneDrive - NTT DATA EMEAL\\Escritorio\\Proyectos\\Otros\\Juegos Aprendizaje Ingles\\image.jpg"
+image_path = "images/image.jpg"  # Ensure the relative path is correct
 image = Image.open(image_path)
 # Mostrar la imagen en la portada
 st.image(image, caption="¡Diviértete con los Mili Games!", use_container_width=True)
