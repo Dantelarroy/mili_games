@@ -10,15 +10,18 @@ st.title("Welcome!")
 
 # Crear un selectbox para elegir el juego
 game_choice = st.selectbox(
-    "Which game would you like to play?",
+    "Which game would you like to play? Select an option and scroll down",
     [None, "Tenses Game", "In, At, On Game"]  # El valor predeterminado es None
 )
 
 # Cargar la imagen
 image_path = "images/image.jpg"  # Ensure the relative path is correct
 image = Image.open(image_path)
-# Mostrar la imagen en la portada
-st.image(image, caption="¡Diviértete con los Mili Games!", use_container_width=True)
+
+# Crear una columna para centrar la imagen
+col1, col2, col3 = st.columns([1, 6, 1])  # La columna central tiene mayor peso
+with col2:
+    st.image(image, caption="Have fun with the Mili Games!", width=500)
 
 # Ejecutar el juego correspondiente si se selecciona una opción
 if game_choice == "Tenses Game":
