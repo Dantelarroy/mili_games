@@ -18,7 +18,7 @@ game_choice = st.selectbox(
 image_path = "images/image.jpg"  # Ensure the relative path is correct
 image = Image.open(image_path)
 # Mostrar la imagen en la portada
-st.image(image, caption="¡Diviértete con los Mili Games!", width=400)  # Ajusta el valor como desees
+st.image(image, caption="¡Diviértete con los Mili Games!", use_container_width=True)
 
 # Ejecutar el juego correspondiente si se selecciona una opción
 if game_choice == "Juego de Tenses":
